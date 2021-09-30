@@ -1,0 +1,123 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    max-width: 450px;
+    margin: 0 auto;
+    min-width: 300px;
+
+    @at-root &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        min-height: 295px;
+        padding: 0;
+
+        @at-root &--empty {
+            align-items: center;
+            background-color: rgba($black, .02);
+            border-radius: 10px;
+            color: $react-blue;
+            display: flex;
+            justify-content: center;
+            height: 50vh;
+            margin-bottom: 20%;
+            
+            &:before {
+                content: 'Add a Task';
+                font: {
+                    size: 2em;
+                    weight: 300;
+                }
+            }
+        }
+
+        @at-root &-item {
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 0 8px lighten($grey, 15%);
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 10px 0;
+            transition: all .4s linear;
+
+            @at-root &-svg {
+                fill: lighten($grey, 30%);
+                display: none;
+                opacity: 0;
+                stroke: $red;
+                transition: opacity .2s linear;
+                width: 20px;
+            }
+
+            @at-root &--done {
+                box-shadow: 0 0 8px lighten($grey, 25%);
+                opacity: .8;
+                color: $react-blue;
+                text-decoration: line-through;
+                transform: scale(.98);
+
+                &:hover {
+                    @at-root & .todo__list-item-svg {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            @at-root &--deleting {
+                transform: scale(0, 0);
+            }
+        }
+    }
+
+    @at-root &__add-task {
+        border: none;
+        border-radius: 100%;
+        box-shadow: 0 0 10px $react-blue;
+        bottom: 35px;
+        cursor: pointer;
+        height: 60px;
+        padding: 0;
+        position: fixed;
+        right: 20px;
+        transition: .2s all ease-in-out;
+        width: 60px;
+        
+        &:hover {
+            transform: scale(1.05);
+
+            @at-root  & > .todo__add-task-svg {
+                fill: darken($react-blue, 5%);
+            }
+        }
+
+        @at-root &-svg {
+            border-radius: 100%;
+            fill: $react-blue;
+        }
+    }
+
+    @at-root &__delete-all {
+        @include ghostButton($red);
+        align-self: flex-end;
+        appearance: none;
+        border-radius: 100px;
+        font: {
+            size: 12px;
+        }
+        padding: 5px 20px;
+        text-decoration: none;
+        transition: all .5s ease;
+
+        @at-root &:hover {
+            @include button($red, $white);
+        }
+
+        @at-root &--hidden {
+            visibility: hidden;
+        }
+    }
+}

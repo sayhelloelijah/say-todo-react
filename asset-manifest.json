@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/say-react-app/static/css/main.85ed87e0.chunk.css",
+    "main.js": "/say-react-app/static/js/main.46e1fe8a.chunk.js",
+    "main.js.map": "/say-react-app/static/js/main.46e1fe8a.chunk.js.map",
+    "runtime-main.js": "/say-react-app/static/js/runtime-main.b6c459f9.js",
+    "runtime-main.js.map": "/say-react-app/static/js/runtime-main.b6c459f9.js.map",
+    "static/js/2.262d9141.chunk.js": "/say-react-app/static/js/2.262d9141.chunk.js",
+    "static/js/2.262d9141.chunk.js.map": "/say-react-app/static/js/2.262d9141.chunk.js.map",
+    "static/js/3.5dfe6937.chunk.js": "/say-react-app/static/js/3.5dfe6937.chunk.js",
+    "static/js/3.5dfe6937.chunk.js.map": "/say-react-app/static/js/3.5dfe6937.chunk.js.map",
+    "index.html": "/say-react-app/index.html",
+    "static/css/main.85ed87e0.chunk.css.map": "/say-react-app/static/css/main.85ed87e0.chunk.css.map",
+    "static/js/2.262d9141.chunk.js.LICENSE.txt": "/say-react-app/static/js/2.262d9141.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6c459f9.js",
+    "static/js/2.262d9141.chunk.js",
+    "static/css/main.85ed87e0.chunk.css",
+    "static/js/main.46e1fe8a.chunk.js"
+  ]
+}
